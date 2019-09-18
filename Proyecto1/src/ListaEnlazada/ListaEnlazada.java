@@ -2,16 +2,16 @@ package ListaEnlazada;
 
 public class ListaEnlazada {
     private Nodo inicio;
-    private boolean entradaA;
-    private boolean entradaB;
-    private boolean salida;
-    private int contador = 0;
+    public int entradaA;
+    public int entradaB;
+    public int salida;
+    public int contador = 0;
 
-    public void agregarAlFinal(boolean valor) {
+    public void agregarAlFinal(int valor) {
         if (this.inicio == null) {
             this.inicio = new Nodo(valor);
         }
-        if (MenorDe3() == true) {
+        if (MenorDe3() == true && valor == 1 || valor == 0) {
             Nodo Acutual = this.inicio;
             while (Acutual.siguiente != null) {
                 Acutual = Acutual.siguiente;
@@ -30,6 +30,7 @@ public class ListaEnlazada {
                 Actual = Actual.siguiente;
                 System.out.println(Actual.valor);
             }
+            System.out.println("-----------------------------------------");
             System.out.println(contador);
         }
     }
@@ -41,33 +42,6 @@ public class ListaEnlazada {
             return false;
         }
     }
-
-    public boolean ObtenerA() {
-        if (this.inicio == null) {
-            return false;
-        }
-        else {
-            this.inicio.valor = entradaA;
-            return entradaA;
-        }
-    }
-    public boolean ObtnerB() {
-        if (this.inicio.siguiente == null) {
-            return false;
-        } else {
-            this.inicio.siguiente.valor = entradaB;
-            return entradaB;
-        }
-    }
-    public boolean ObtnerSalida() {
-        if (this.inicio.siguiente.siguiente == null) {
-            return false;
-        } else {
-            this.inicio.siguiente.siguiente.valor = salida;
-            return salida ;
-        }
-    }
 }
-
 
 

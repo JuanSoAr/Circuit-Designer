@@ -1,9 +1,9 @@
 package ListaEnlazada;
 
 public class Nodo {
-    boolean valor;
+    int valor;
     Nodo siguiente;
-    public Nodo(boolean valor){
+    public Nodo(int valor){
         this.valor = valor;
         this.siguiente = null;
     }

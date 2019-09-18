@@ -1,16 +1,18 @@
 package Compuertas;
+public class CompuertaNot extends CompuertaLogica {
+    public void Comportamiento() {
+        if (entradaA == 2) {
+            //Metodo para pedir valor
 
-import ListaEnlazada.ListaEnlazada;
-import javafx.scene.image.ImageView;
+        }
+        if ((entradaA == 0 || entradaA == 1) && (entradaB == 0 || entradaB == 1)) {
+            Compuerta.agregarAlFinal(entradaA);
 
-public class CompuertaNot extends CompuertaLogica{
-    ImageView imagenCompuertaNand =new ImageView();
-    ListaEnlazada listaCompuertaNand = new ListaEnlazada();
-
-    @Override
-    public void comportamiento() {
-        this.setSalida(!(isEntradaA()));
-        boolean salida = this.isSalida();
-        System.out.println(salida);
+            if (entradaA == 1) {
+                Compuerta.agregarAlFinal(0);
+            } else {
+                Compuerta.agregarAlFinal(1);
+            }
+        }
     }
 }

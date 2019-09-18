@@ -1,12 +1,8 @@
 package Compuertas;
 
-import ListaEnlazada.ListaEnlazada;
 
-public class CompuertaLogica {
-    ListaEnlazada Compuerta = new ListaEnlazada();
-    int entradaA=2;
-    int entradaB = 2;
-    public int salida;
+
+public class CompuertaAnd extends CompuertaLogica{
 
     public void Comportamiento() {
         if(entradaA == 2){
@@ -18,10 +14,13 @@ public class CompuertaLogica {
         if((entradaA == 0 || entradaA ==1) && (entradaB == 0 || entradaB ==1)){
             Compuerta.agregarAlFinal(entradaA);
             Compuerta.agregarAlFinal(entradaB);
+            if(entradaA == 1 && entradaB ==1){
+                Compuerta.agregarAlFinal(1);
+            }
+            else{
+                Compuerta.agregarAlFinal(0);
             }
         }
     }
-
-
-
+}
 
