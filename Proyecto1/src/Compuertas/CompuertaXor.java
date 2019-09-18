@@ -1,6 +1,10 @@
 package Compuertas;
 
 public class CompuertaXor extends CompuertaLogica {
+    public CompuertaXor(int entradaA, int entradaB) {
+        super(entradaA, entradaB);
+    }
+
     public void Comportamiento() {
         if (entradaA == 2) {
             //Metodo para pedir valor

@@ -3,6 +3,9 @@ package Compuertas;
 
 
 public class CompuertaAnd extends CompuertaLogica{
+    public CompuertaAnd(int entradaA, int entradaB) {
+        super(entradaA, entradaB);
+    }
 
     public void Comportamiento() {
         if(entradaA == 2){
@@ -21,6 +24,10 @@ public class CompuertaAnd extends CompuertaLogica{
                 Compuerta.agregarAlFinal(0);
             }
         }
+        System.out.println(entradaA);
+        System.out.println(entradaB);
+        System.out.println(salida);
     }
+
 }
 

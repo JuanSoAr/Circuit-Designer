@@ -21,17 +21,22 @@ public class ListaEnlazada {
         }
     }
 
-    public void imprimirLista() {
+    public void Mostrar() {
         if (this.inicio == null) {
             System.out.println("Error");
-        } else {
-            Nodo Actual = this.inicio;
-            while (Actual.siguiente != null) {
+        }
+        Nodo Actual = this.inicio;
+        System.out.print("[");
+        while (Actual.siguiente != null) {
+            if (Actual.siguiente.siguiente == null) {
                 Actual = Actual.siguiente;
-                System.out.println(Actual.valor);
+                System.out.print(Actual.valor);
+                System.out.print("]");
+
+            } else {
+                Actual = Actual.siguiente;
+                System.out.print(Actual.valor + ",");
             }
-            System.out.println("-----------------------------------------");
-            System.out.println(contador);
         }
     }
 

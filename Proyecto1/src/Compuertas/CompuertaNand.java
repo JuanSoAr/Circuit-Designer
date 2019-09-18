@@ -2,6 +2,10 @@ package Compuertas;
 
 public class CompuertaNand extends CompuertaLogica {
 
+    public CompuertaNand(int entradaA, int entradaB) {
+        super(entradaA, entradaB);
+    }
+
     public void Comportamiento() {
         if (entradaA == 2) {
             //Metodo para pedir valor

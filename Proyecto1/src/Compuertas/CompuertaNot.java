@@ -1,5 +1,9 @@
 package Compuertas;
 public class CompuertaNot extends CompuertaLogica {
+    public CompuertaNot(int entradaA, int entradaB) {
+        super(entradaA, entradaB);
+    }
+
     public void Comportamiento() {
         if (entradaA == 2) {
             //Metodo para pedir valor
