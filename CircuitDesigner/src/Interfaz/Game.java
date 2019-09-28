@@ -191,6 +191,12 @@ public class Game implements Runnable {
     }
 
     /**
+     *Permite obtener la instancia de la clase LineMager
+     * @return La instancias PlayerManager
+     */
+
+
+    /**
      * Metodo que permite poner en ejecucion la clase game creando e iniciando el hilo principal
      */
     public synchronized void start() {

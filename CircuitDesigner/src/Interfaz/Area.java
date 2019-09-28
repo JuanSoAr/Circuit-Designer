@@ -9,7 +9,7 @@ import java.awt.*;
 public class Area {
 
     protected int x, y,width, height;
-    protected Rectangle bounds = new Rectangle(0,0,100,100);;
+    protected Rectangle bounds = new Rectangle(0,0,100,100);
 
 
     public int getX() {

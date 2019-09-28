@@ -1,5 +1,4 @@
 package Interfaz;
-
 import java.awt.*;
 
 /**
@@ -12,7 +11,7 @@ public class GameState extends State {
 
     /**
      * Constructor
-     * @param handler handler
+     * @param handler handler1
      * @param playerManager PlayerManager
      * @param areaManager AreaManager
      */
@@ -20,14 +19,8 @@ public class GameState extends State {
         super(handler);
         this.playerManager = playerManager;
         this.areaManager = areaManager;
-
-
         createAreas();
-
         createConectorTable();
-
-
-
     }
 
     /**
@@ -66,7 +59,6 @@ public class GameState extends State {
         playerManager.addObject(new Player(handler,5,345,"NAND"));
         playerManager.addObject(new Player(handler,5,430,"NOR"));
         playerManager.addObject(new Player(handler,5,515,"NXOR"));
-
     }
 
     /**
@@ -83,7 +75,6 @@ public class GameState extends State {
             for(int j = 0; j < 15; j++) {
                 areaManager.addArea(new Area(x,y,145,60));
                 y += 60;
-
             }
         }
     }

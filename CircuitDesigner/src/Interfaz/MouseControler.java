@@ -10,10 +10,9 @@ import java.awt.event.MouseMotionListener;
 public class MouseControler implements MouseListener, MouseMotionListener {
 
     private boolean leftPressed, rightPressed;
+    public boolean second;
     private int mouseX, mouseY;
     private PlayerManager playerManager;
-
-
 
     /**
      *Cambiar a el PlayerManager
@@ -90,6 +89,8 @@ public class MouseControler implements MouseListener, MouseMotionListener {
      */
     @Override
     public void mouseClicked(MouseEvent e) {
+        second= true;
+
         // TODO Auto-generated method stub
 
     }
@@ -131,21 +132,22 @@ public class MouseControler implements MouseListener, MouseMotionListener {
         }
     }
 
+
     /**
      * Cuando el Mause es liberado
      * @param e
      */
     @Override
     public void mouseReleased(MouseEvent e) {
-        if(e.getButton() == MouseEvent.BUTTON1) {
+        if (e.getButton() == MouseEvent.BUTTON1) {
             leftPressed = false;
-        }
-        if(e.getButton() == MouseEvent.BUTTON3) {
-            rightPressed = false;
-        }
+            if (e.getButton() == MouseEvent.BUTTON3) {
+                rightPressed = false;
+            }
 
-        if(playerManager != null) {
-            playerManager.onMouseRelease(e);
+            if (playerManager != null) {
+                playerManager.onMouseRelease(e);
+            }
         }
     }
 

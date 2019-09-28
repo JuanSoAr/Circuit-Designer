@@ -10,7 +10,6 @@ import java.util.ArrayList;
 public class PlayerManager {
     private Handler handler;
     public Handler getHandler() {
-
         return handler;
     }
 
@@ -58,6 +57,7 @@ public class PlayerManager {
             player.tick();
         }
     }
+
     /**
      * Actualiza los graficos de los elementos de la lista
      * @param g pintor
@@ -102,6 +102,7 @@ public class PlayerManager {
         for(Player player : objects) {
             player.onMousePressed(e);
         }
+
     }
     /**
      * Llama al metodo onMouseDragged de todos los elementos de la lista

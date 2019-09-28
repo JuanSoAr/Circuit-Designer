@@ -1,6 +1,7 @@
 package CompuertasLogicas;
 
 import Lista.ListaEnlazada;
+import ListasDeListas.ListaDeListas;
 import ListasDeListas.NodoLista;
 
 public class CompuertaLogica {
@@ -14,7 +15,10 @@ public class CompuertaLogica {
     boolean añadirEntradaB = true;
     private NodoLista inicio;
 
-
+    public CompuertaLogica(int entradaA, int entradaB) {
+        this.entradaA = entradaA;
+        this.entradaB = entradaB;
+    }
 
     public void Comportamiento() {
         if(añadirEntradaA == true){
@@ -67,7 +71,7 @@ public class CompuertaLogica {
                 Actual.lista.setEntradaA(valor);
                 añadirEntradaA = false;
             }
-            if (pos == 2){
+            if (pos == 2) {
                 System.out.println(valor);
                 Actual.lista.setEntradaB(valor);
                 añadirEntradaB = false;
